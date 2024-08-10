@@ -1,0 +1,33 @@
+[
+    {
+        "description": "When writing a CDK stack unless otherwise specified, adhere to the following best practices for construct selection",
+        "labels": [
+            "cdk",
+            "lambda",
+            "rest",
+            "api"
+        ],
+        "rules": [
+            "For lambda functions, use the @aws-cdk/aws-lambda-nodejs library and the NodejsFunction construct.",
+            "Use the latest nodejs runtime available (e.g. nodejs20)",
+            "For REST apis, use the LambdaRestApi construct"
+        ]
+    },
+    {
+        "description": "When writing a lambda function using CDK unless otherwise specified, adhere to the following best practices",
+        "labels": [
+            "cdk",
+            "lambda",
+            "rest",
+            "api"
+        ],
+        "rules": [
+            "Use the AWS v3 SDK",
+            "Use @types/lambda to annotate the expected input and output types",
+            "All lambdas are a single typescript file, with a single handler function",
+            "Write unit tests for the lambda function, to validate behavior before pushing",
+            "If Docker-related build issues occur when running tests, then install the development dependency esbuild"
+        ]
+    }
+]
+
