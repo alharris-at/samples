@@ -1,0 +1,23 @@
+[
+    {
+        "langTag": "typescript",
+        "labels": [
+            "cdk",
+            "lambda",
+            "rest",
+            "api",
+            "gateway"
+        ],
+        "contents": "new apigateway.LambdaRestApi(this, 'HelloWorldApi', {\\n\\t\\t\\thandler: helloWorldLambda,\\n\\t\\t\\tproxy: false,\\n\\t\\t  });"
+    },
+    {
+        "langTag": "typescript",
+        "labels": [
+            "cdk",
+            "lambda",
+            "function"
+        ],
+        "contents": "new lambdanodejs.NodejsFunction(this, 'HelloWorldLambda', {\\n\\t\\t\\truntime: lambda.Runtime.NODEJS_20_X,\\n\\t\\t\\tentry: path.join(__dirname, '..', 'lambda', 'hello-world.ts'),\\n\\t\\t  });"
+    }
+]
+
